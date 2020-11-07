@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Identity by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/logo_V1_square_122x122.png" alt="" /></span>
+                <div id="1stSection">
+							<h1>Welcome to LiTconnect</h1>
+							<p>Let's LighT up the connection!</p>
+                            
+                
+                            
+                <button onclick="showHide()" id="downArrow" type="button"> ▼ </button>
+                <hr/>
+                </div> 
+                
+                            
+						</header>
+    <!-- Down Arrow to click ▼ (Show fields to enter) https://www.w3schools.com/howto/howto_js_read_more.asp https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+            https://css-tricks.com/exposing-form-fields-radio-button-css/ -->
+						
+                        
+                <div id="more">
+						<!-- <hr/> -->
+						<h2>Your Details!</h2>
+						<form method="post" action="#">
+							<div class="fields">
+                                
+                                <div class="field">
+									<input type="radio" id="gender_m" name="gender" /><label for="gender_m">Male</label>
+									<input type="radio" id="gender_f" name="gender" /><label for="gender_f">Female</label>
+								</div>
+								<div class="field">
+									<input type="text" name="name" id="name" placeholder="Name" />
+								</div>
+                                <div class="field">
+									<input type="text" name="surname" id="surname" placeholder="Surname" />
+								</div>
+								<div class="field">
+									<input type="email" name="email" id="email" placeholder="Email" />
+								</div>
+                                <div class="field">
+									<input type="text" name="contact_numb" id="contact_numb" placeholder="Contact Number" />
+								</div>
+                                
+                                
+                        <!-- Encorp Google Maps API -->
+                                <div class="field">
+                                    <label>Location</label>
+									<input type="text" name="home" id="home" placeholder="Home" />
+								</div>
+                        <!-- Encorp Google Maps API -->
+                                <div class="field">
+									<input type="text" name="current" id="current" placeholder="Current" />
+								</div>
+                                
+                                <div class="field">
+                                    <label>Work</label>
+									<input type="text" name="profession" id="profession" placeholder="Profession" />
+								</div>
+                                <div class="field">
+									<input type="text" name="company" id="company" placeholder="Company" />
+								</div>
+                                
+                                
+                        <!-- Something like a Radio Button/Drop down -->
+                                <div class="field">
+                                    <label>Social Media</label>
+									<input type="text" name="instagram" id="instagram" placeholder="Instagram" />
+								</div>
+                                <div class="field">
+									<input type="text" name="linkedin" id="linkedin" placeholder="LinkedIn" />
+								</div>
+                                
+                    <br><br><br>
+                                
+                                
+                    <button onclick="showBottom()" id="downArrow2" type="button" > ▼ </button>
+                    <div id="bottomFields" class="field">
+                        <!-- Down Arrow to click ▼ (Show fields to enter) -->
+                                <div class="field" >
+                                    <h2>Our Connection</h2>
+                                <!-- Encorp Google Maps API -->
+									<input type="text" name="where_met" id="where_met" placeholder="Where we met" />
+								</div>
+                        <br>
+                                <div class="field" >
+									<textarea name="the_click" id="the_click" placeholder="The &quot;click&quot;" rows="4"></textarea>
+								</div>
+                        <br>
+							<ul class="actions special" >
+								<li><a href="#" class="button" >LiTConnect</a></li>
+							</ul>
+                    </div>
+                                
+                        </div>
+						</form>
+						<hr/> 
+                </div>
+	
+						<footer>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter">Twitter</a></li>
+								<li><a href="#" class="icon brands fa-instagram">Instagram</a></li>
+								<li><a href="#" class="icon brands fa-facebook-f">Facebook</a></li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li><a href="http://www.benwolfaardt.com/">Ben Wolfaardt</a> & <a href="https://www.instagram.com/christiaantech01/">Christiaan Bouwer</a></li><li>&copy; LitConnect</li>
+						</ul>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+                
+                function showHide(){
+                    console.log("Test1");
+                    let hideSection = document.getElementById("1stSection");
+                    let moreText = document.getElementById("more");
+                    //let finalMoreText = document.getElementById("");
+                   //let btnText = document.getElementById("downArrow");
+                    
+                    if(moreText.style.display === "none"){
+                        console.log("Test1.1");
+                        hideSection.style.display = "inline";
+                        
+                        //btnText.innerHTML = "Read more";
+                        moreText.style.display = "none";
+                        //x.style.display = "block";
+                    } else {
+                        console.log("Test1.2");
+                        hideSection.style.display = "none";
+                        //btnText.innerHTML = "Read less";
+                        moreText.style.display = "inline";
+                        //x.style.display = "none";
+                    }
+                }
+                
+                function showBottom(){
+                    console.log("Test2");
+                    //let hideSection = document.getElementById("1stSection");
+                    //let moreText = document.getElementById("more");
+                    let moreFields = document.getElementById("bottomFields");
+                    let downBtn = document.getElementById("downArrow2");
+                    
+                    if(moreFields.style.display === "none"){
+                        console.log("Test2.1");
+                        //hideSection.style.display = "inline";
+                        
+                        //downBtn.style.display = "none";
+                        moreFields.style.display = "none";
+                        //x.style.display = "block";
+                    } else {
+                        console.log("Test2.2");
+                        moreFields.style.display = "inline";
+                        downBtn.style.display = "none";
+                        //hideSection.style.display = "none";
+                        //btnText.innerHTML = "Read less";
+                        //moreFields.style.display = "inline";
+                        //x.style.display = "none";
+                    }
+                }
+			</script>
+
+	</body>
+</html>
